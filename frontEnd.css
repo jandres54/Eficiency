@@ -1,10 +1,23 @@
-/* .container {
+.container {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  width: 5000vh;
   justify-content: center;
   align-items: center;
-  background-image: url(images/nature.jpg);
+}
+.root {
+  background-image: url(images/11750.jpg);
   background-size: cover;
-  text-emphasis-color: white;
-} */
+  font-family: "Benne", serif;
+}
+
+#crap {
+  background-color: rgb(255, 248, 220, 0.5);
+  border: 5px solid blueviolet;
+  padding: 3%;
+  border-radius: 10%;
+}
+.stationcontainer {
+  background-color: white;
+}
