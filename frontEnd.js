@@ -2,13 +2,16 @@ let button1 = document.querySelector("#energy");
 const zipInput = document.querySelector(".zipInput");
 const body = document.querySelector(".root");
 
+
+const container = document.querySelector(".stationcontainer")
+console.log(container.length)
+
+
 const getFuel = async () => {
   const energy = await fetch(`https://developer.nrel.gov/api/alt-fuel-stations/v1.json?limit=10&zip=${zipInput.value}&api_key=fS0wmzxjg7aqScd1ol16imIA5cLVIBPtenOqTXHZ`);
 
 const convertedJson = await energy.json();
 
-
-const container = document.querySelector(".stationcontainer")
 
 const uList = document.createElement("ul")
 
@@ -33,13 +36,17 @@ convertedJson.fuel_stations.forEach(element => {
 
   list.append(info)
 
+  console.log(info.length)
+  
   uList.append(list)
 });
 container.append(uList)
+
+
 }
 
-
-
 button1.addEventListener("click", getFuel)
+
+
 
 
