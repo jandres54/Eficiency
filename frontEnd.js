@@ -29,12 +29,15 @@ convertedJson.fuel_stations.forEach(element => {
 
   const list = document.createElement("li")
 
+  list.classList.add("listItem")
+
   list.append(info)
 
   uList.append(list)
 });
 container.append(uList)
 }
+
 
 
 button1.addEventListener("click", getFuel)
